@@ -1,0 +1,33 @@
+.logo {
+    grid-area: logo;
+}
+
+.titulo {
+    grid-area: titulo;
+}
+
+.formulario {
+    grid-area: formulario;
+}
+
+.info {
+    grid-area: info;
+}
+
+.pie {
+    grid-area: pie;
+}
+
+.registrar>div {
+    background-color: burlywood;
+    text-align: center;
+    font-size: 15px;
+}
+
+.registrar {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-rows: 1fr 200px 1fr;
+    grid-template-areas: "logo titulo titulo" "info info formulario" "pie pie pie";
+    background-color: aqua;
+}
