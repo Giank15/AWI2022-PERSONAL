@@ -11,7 +11,9 @@ var variableGlobal=0; //Variable global (deben evitarse)
 
 let valorMultiplicar=5;
 
-calcular.addEventListener('click', generarTablaMultiplicar(10));
+calcular.addEventListener('click', ()=>{
+  generarTablaMultiplicar(multiplicar.value);
+});
 
 generarTablaMultiplicar(Number(multiplicar.value));
 
@@ -24,6 +26,21 @@ function generarTablaMultiplicar(tabla){
   }
 }
 
+invertir.addEventListener('click', ()=>{
+  comida.value = comida.value.split(" ").reverse().join(" ");
+})
+
+cambiarValores.addEventListener('click', ()=>{
+  const auxiliar = txtnumero1.value;
+  txtnumero1.value = txtnumero2.value;
+  txtnumero2.value = auxiliar;
+})
+
+sumar.addEventListener('click', ()=>{
+  //resultado.value = Number(txtnumero1.value) + Number(txtnumero2.value);
+  //console.log(`${txtnumero1.value} ${sumar.innerHTML} ${txtnumero2.value}`);
+  resultado.value = eval(`${txtnumero1.value} ${sumar.innerHTML} ${txtnumero2.value}`);
+})
 
 document.querySelector('#app').innerHTML = `
   <h1>Hello Vite!</h1>
