@@ -20,7 +20,7 @@ html+=`</tr>`;
 }*/
 for(let elemento of comidas){
   html+=`<tr>`
-  html+=`<td><button class='consultai'>${elemento.codigo}</button></td>`;
+  html+=`<td><button class='consultai' id=${elemento.codigo}>${elemento.codigo}</button></td>`;
   html+=`<td>${elemento.descripcion}</td>`;
   html+=`<td>${elemento.tipo}</td>`;
   html+=`<td><button class='editar'>Editar</button></td>`;
@@ -67,9 +67,9 @@ botonesCon.forEach(boton1 => {
     let comida = comidas.find((elemento)=>{
       return elemento.codigo==boton1.id
     })
-    codigo.value = comidas.codigo;
-    descripcion.value = comidas.descripcion;
-    tipo.value = comidas.tipo;
+    codigo.value = comida.codigo;
+    descripcion.value = comida.descripcion;
+    tipo.value = comida.tipo;
   })  
 })
 /*let boton = document.querySelector('.editar');
