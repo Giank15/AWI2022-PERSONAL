@@ -1,30 +1,26 @@
-const persona = {
-  nombre:"Bart Simpson",
-  edad: 8,
-  apodo:"El Barto"
-}
-
-const {nombre, apodo} = persona;
-
-//  console.log(nombre);
-//  console.log(apodo);
-
-const crearpersonajeAntes = (personaje)=>{
-  return{
-    id:123123123,
-    nombre: personaje.nombre,
-    edad: personaje.edad,
-    apodo: personaje.apodo
-  }
-}
-
-const crearPersonaje = ({nombre, edad, apodo})=>(
+const personajes = [
   {
-    id:123123123,
-    nombre,
-    edad,
-    apodo
+    nombre:'Homero Simpson',
+    grado:'padre'
+  },
+  {
+    nombre:'Bart Simpson',
+    grado:'hijo'
+  },
+  {
+    nombre:'March Simpson',
+    grado:'esposa'
+  },
+  {
+    nombre:'Lissa Simpson',
+    grado:'hijo'
   }
-)
+]
 
-console.log(crearPersonaje(persona));
+//export const tipo = ["A","B"]
+//export default personajes;
+
+export{
+  personajes,
+  tipo
+}
