@@ -1,14 +1,29 @@
-import {personajes} from './datos'
+//import {personajes} from './datos'
 
-//console.log(personajes[0].nombre)
-//const personajesFiltrados = personajes.filter((personaje)=>{
-//return personaje.grado === "hijo";
-//})
+const personajes = [
+  {
+    nombre:'Homero Simpson',
+    grado:'padre'
+  },
+  {
+    nombre:'Bart Simpson',
+    grado:'hijo'
+  },
+  {
+    nombre:'March Simpson',
+    grado:'esposa'
+  },
+  {
+    nombre:'Lissa Simpson',
+    grado:'hijo'
+  }
+]
 
-const personajesFiltrados = personajes.find((personaje)=>{
-  //personaje.nombre.split(" ")[0][0] === personaje.nombre.splitsplit(" ")[0][0].toUpperCase()
-  return personaje.nombre.toLowerCase() === "Homero Simpson".toLowerCase();
-})
+  //export 
+  const tipo = ["A","B"]
+  //export default personajes;
 
-console.log(personajes);
-console.log(personajesFiltrados)
+export{
+  personajes,
+  tipo
+}

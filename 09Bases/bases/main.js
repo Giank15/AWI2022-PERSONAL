@@ -1,26 +1,22 @@
-const personajes = [
-  {
-    nombre:'Homero Simpson',
-    grado:'padre'
-  },
-  {
-    nombre:'Bart Simpson',
-    grado:'hijo'
-  },
-  {
-    nombre:'March Simpson',
-    grado:'esposa'
-  },
-  {
-    nombre:'Lissa Simpson',
-    grado:'hijo'
+//npm install axios
+//npmjs - Para consultar las librerias de JavaScript
+import axios from 'axios'
+
+const apiKey = 'VmIhyXppWeqj51GRfbg0CEo6IscdensA'
+const gifApi = axios.create({
+  baseURL:'https://api.giphy.com/v1/gifs',
+  params:{
+    api_key: apiKey
   }
-]
+})
 
-//export const tipo = ["A","B"]
-//export default personajes;
+///random?api_key=${apiKey}
+gifApi.get('/random').then(resp=>{
+  const {data} = resp.data
+  const {url} = data.images.original;
 
-export{
-  personajes,
-  tipo
-}
+  console.log(url)
+  const image = document.createElement('img');
+  image.src = url;
+  document.body.append(image);
+})
