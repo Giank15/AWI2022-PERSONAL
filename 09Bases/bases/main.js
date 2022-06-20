@@ -1,22 +1,20 @@
-//npm install axios
-//npmjs - Para consultar las librerias de JavaScript
-import axios from 'axios'
+let firstName = "Andrés";
+let lastName = 'Arteaga';
 
-const apiKey = 'VmIhyXppWeqj51GRfbg0CEo6IscdensA'
-const gifApi = axios.create({
-  baseURL:'https://api.giphy.com/v1/gifs',
-  params:{
-    api_key: apiKey
-  }
-})
+//usado para alternativas o condicionales -- escoge la primera afirmativa de las sentencias
+//console.log(`${firstName || 1<0 || 'Sin nombre'} ${lastName || 'Sin apellido'}`)
 
-///random?api_key=${apiKey}
-gifApi.get('/random').then(resp=>{
-  const {data} = resp.data
-  const {url} = data.images.original;
+//usado en validaciones consecutivas -- continua hasta encontrar una negativa
+//console.log(firstName.length>0 && lastName.length>0 && 'Conectado a la base de datos');
 
-  console.log(url)
-  const image = document.createElement('img');
-  image.src = url;
-  document.body.append(image);
-})
+const estadoActivo = false;
+let mensaje = estadoActivo ? 'Activo' : 'Inactivo';
+
+//if (estadoActivo){
+//  mensaje = 'Activo'
+//}
+//else{
+//  mensaje = 'Inactivo'
+//}
+
+console.log(mensaje);
