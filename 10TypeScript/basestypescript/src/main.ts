@@ -1,8 +1,23 @@
 import './style.css'
 
-const app = document.querySelector<HTMLDivElement>('#app')!
+type Hero = {
+  name: string,
+  age: number,
+  powers: number[],
+  getName?: ()=>string
+}
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+const superman:Hero = {
+  name:'Clark Kent',
+  age:55,
+  powers:[1,2],
+  getName(){
+    return this.name
+  }
+}
+
+const flash:Hero = {
+  name:'Barry Allen',
+  age:26,
+  powers:[1]
+}
