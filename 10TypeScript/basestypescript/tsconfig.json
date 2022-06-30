@@ -16,5 +16,5 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["src", "interfaces/pokemon.ts"]
+  "include": ["src", "src/interfaces/pokemon.ts"]
 }
