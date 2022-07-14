@@ -4,6 +4,6 @@ export interface IProducto{
     estado: boolean;
     precio: number;
     costo: number;
-    minimo: number;
+    mínimo: number;
     stock: number;
 }
